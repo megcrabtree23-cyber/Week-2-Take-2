@@ -4,14 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pricing Plans — HTML version</title>
+    <!-- Preconnect: opens early connection to Google Fonts (faster first paint) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Preconnect + crossorigin: required path for loading font files from gstatic -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Stylesheet: Inter (400–700); swap avoids invisible text while fonts load -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Local styles: layout, cards, buttons, colors (edit styles.css) -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Top banner: context label only (fixed position in CSS) -->
     <p class="page-label"><strong>HTML version</strong> — static markup</p>
+
+    <!-- Row of pricing cards; gap and alignment set in .cards-container -->
     <div class="cards-container">
+        <!-- Card: Hobby tier — title, price, feature list, secondary CTA -->
         <div class="card">
             <div class="card-top">
                 <h3 class="card-title">Hobby</h3>
@@ -36,8 +44,11 @@
                     </ul>
                 </div>
             </div>
+            <!-- Outline-style pill button (see .download-button.secondary) -->
             <button class="download-button secondary">Download</button>
         </div>
+
+        <!-- Card: Pro tier — price + period spans, longer list, primary CTA -->
         <div class="card">
             <div class="card-top">
                 <h3 class="card-title">Pro</h3>
@@ -67,7 +78,40 @@
                     </ul>
                 </div>
             </div>
+            <!-- Filled dark pill — visual emphasis for recommended plan -->
             <button class="download-button primary">Get Pro</button>
+        </div>
+
+        <!-- Card: Enterprise tier — custom pricing, Pro+ features, sales CTA -->
+        <div class="card">
+            <div class="card-top">
+                <h3 class="card-title">Enterprise</h3>
+                <p class="card-price">
+                    <span class="card-price-amount">Custom</span>
+                </p>
+                <div class="card-content">
+                    <p class="includes-text">Everything in Pro, plus:</p>
+                    <ul class="features-list">
+                        <li>
+                            <span class="checkmark">✓</span>
+                            SCIM and SSO
+                        </li>
+                        <li>
+                            <span class="checkmark">✓</span>
+                            Organization-wide policies
+                        </li>
+                        <li>
+                            <span class="checkmark">✓</span>
+                            Priority support and onboarding
+                        </li>
+                        <li>
+                            <span class="checkmark">✓</span>
+                            Invoice billing and custom terms
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button class="download-button primary">Contact sales</button>
         </div>
     </div>
 </body>
