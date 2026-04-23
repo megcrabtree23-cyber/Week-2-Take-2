@@ -161,6 +161,20 @@ body {
     background-color: #333;
 }
 
+.download-button.tertiary {
+    background-color: transparent;
+    color: #333;
+    border: 1px solid #b9b8b6;
+}
+
+.download-button.tertiary:hover {
+    background-color: #e9e8e3;
+}
+
+.download-button.tertiary:active {
+    background-color: #e9e8e3;
+}
+
 /* --------------------------------------------------------------------------
    Top “HTML version” chip
    Fixed to viewport top; shadow + white pill for dev/context label.
